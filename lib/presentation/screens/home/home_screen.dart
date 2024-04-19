@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgtes_app/config/menu/menu_items.dart';
 import 'package:widgtes_app/presentation/screens/buttons/home_screen.dart';
 
@@ -70,7 +71,10 @@ class _CustomListTile extends StatelessWidget {
         // ); forma 1
         // Segunda Forma
         // Llama a las rutas
-        Navigator.pushNamed(context, menuItem.link);
+        // -------
+        // Para cambiar la pantalla es --> go
+        // Para regresar la pantalla es --> push
+        context.push(menuItem.link);
       },
     );
   }

@@ -10,4 +10,4 @@ git checkout -b 01-bases
 | Uso              | Descripción                         |
 | ---------------- | ----------------------------------- |
 | ListView.builder | Se construye en tiempo de ejecucion |
-| gore             |                                     |
+| go_router        | Para el manejo de rutas             |
