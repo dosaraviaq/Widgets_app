@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgtes_app/config/menu/menu_items.dart';
+import 'package:widgtes_app/presentation/screens/buttons/home_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -60,6 +61,16 @@ class _CustomListTile extends StatelessWidget {
       // Habiltams en ontap para el evento del Splash
       onTap: () {
         // Todo navegar a otra pantalla
+        //  contex --> arbol de componentes
+        // push --> otra pagina otra y otra pantalla
+        // Navigator.of(context).push(
+        //   MaterialPageRoute(
+        //     builder: (context) => const ButtonsScreen(),
+        //   ),
+        // ); forma 1
+        // Segunda Forma
+        // Llama a las rutas
+        Navigator.pushNamed(context, menuItem.link);
       },
     );
   }
