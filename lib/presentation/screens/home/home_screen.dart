@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgtes_app/config/menu/menu_items.dart';
-import 'package:widgtes_app/presentation/screens/buttons/home_screen.dart';
+import 'package:widgtes_app/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+  // Para el name de las rutas nunca cambiara
+  static const String name = 'home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -22,7 +24,6 @@ class HomeScreen extends StatelessWidget {
 class _HomeView extends StatelessWidget {
 //  Text('nombre');
 // ListTitle
-
   @override
   Widget build(BuildContext context) {
     // Manejo de ListView
@@ -74,7 +75,9 @@ class _CustomListTile extends StatelessWidget {
         // -------
         // Para cambiar la pantalla es --> go
         // Para regresar la pantalla es --> push
-        context.push(menuItem.link);
+        // context.push(menuItem.link);
+        // Solo con go_router
+        context.pushNamed(CardsScreen.name);
       },
     );
   }
