@@ -10,12 +10,12 @@ class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
   @override
-  Widget build(BuildContext context ) {
+  Widget build(BuildContext context) {
     return MaterialApp.router(
       // Configuracion de las rutas gorouter
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 1).getTheme(),
+      theme: AppTheme(selectedColor: 0).getTheme(),
     );
   }
 }

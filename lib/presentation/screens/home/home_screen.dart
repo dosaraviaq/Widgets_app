@@ -75,9 +75,9 @@ class _CustomListTile extends StatelessWidget {
         // -------
         // Para cambiar la pantalla es --> go
         // Para regresar la pantalla es --> push
-        // context.push(menuItem.link);
+        context.push(menuItem.link);
         // Solo con go_router
-        context.pushNamed(CardsScreen.name);
+        // context.pushNamed(CardsScreen.name);
       },
     );
   }
