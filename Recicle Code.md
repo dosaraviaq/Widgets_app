@@ -15,3 +15,7 @@ git checkout -b 01-bases
 ## 10 Tipos de Botones
 ![[Pasted image 20240422171208.png]]
 -- -
+## Tipos de tarjetas
+
+![[qemu-system-x86_64_hKvejVMVpF.gif]]
+-- -
