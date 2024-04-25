@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 // Importacion correcta (export)
 import 'package:widgtes_app/presentation/screens/screens.dart';
@@ -26,5 +27,11 @@ final appRouter = GoRouter(initialLocation: '/', routes: [
     path: '/progress',
     name: ProgressScreen.name,
     builder: (context, state) => const ProgressScreen(),
+  ),
+  // Ruta del menu de snackbars
+  GoRoute(
+    path: '/snackbars',
+    name: SnackbarScreen.name,
+    builder: (context, state) => const SnackbarScreen(),
   ),
 ]);

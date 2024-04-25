@@ -12,6 +12,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      // Titulo del dialogo
+      title: 'Flutter Widgets',
       // Configuracion de las rutas gorouter
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
