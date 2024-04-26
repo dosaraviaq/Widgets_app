@@ -7,10 +7,9 @@ git checkout -b 01-bases
 
 -- -
 ### ListView
-| Uso              | Descripción                         |
-| ---------------- | ----------------------------------- |
-| ListView.builder | Se construye en tiempo de ejecucion |
-| go_router        | Para el manejo de rutas             |
+| Uso              | Descripción                                                         |
+| ---------------- | ------------------------------------------- |
+| ListVi         w.b   ild   r |   Se    ons   ruy    en   tie                                              Para las animaciones                                                                                                                                               |
 -- -
 ## 10 Tipos de Botones
 ![[Pasted image 20240422171208.png]]
