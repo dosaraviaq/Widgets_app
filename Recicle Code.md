@@ -19,3 +19,13 @@ git checkout -b 01-bases
 
 ![[qemu-system-x86_64_hKvejVMVpF.gif]]
 -- -
+## Progress
+![[qemu-system-x86_64_TFRDvPpYQd.gif]]
+-- -
+
+## Snackbaras y dialogos
+![[qemu-system-x86_64_05lkwXRvKc.gif]]
+-- -
+## Animaciones 
+}![[qemu-system-x86_64_YYKeNI55os.gif]]
+-- - 

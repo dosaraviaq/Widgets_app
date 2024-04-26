@@ -17,7 +17,7 @@ class MainApp extends StatelessWidget {
       // Configuracion de las rutas gorouter
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 0).getTheme(),
+      theme: AppTheme(selectedColor: 6).getTheme(),
     );
   }
 }

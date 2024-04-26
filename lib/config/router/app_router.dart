@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 // Importacion correcta (export)
 import 'package:widgtes_app/presentation/screens/screens.dart';
@@ -39,5 +38,11 @@ final appRouter = GoRouter(initialLocation: '/', routes: [
     path: '/animated',
     name: AnimatedScreen.name,
     builder: (context, state) => const AnimatedScreen(),
+  ),
+  // Ruta del menu de UI
+  GoRoute(
+    path: '/ui-controls',
+    name: UiControlsScreen.name,
+    builder: (context, state) => const UiControlsScreen(),
   ),
 ]);
