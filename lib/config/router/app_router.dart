@@ -57,4 +57,10 @@ final appRouter = GoRouter(initialLocation: '/', routes: [
     name: InfiniteScrollScreen.name,
     builder: (context, state) => const InfiniteScrollScreen(),
   ),
+  // Contador
+  GoRoute(
+    path: '/counter-river',
+    name: CounterScreen.name,
+    builder: (context, state) => const CounterScreen(),
+  ),
 ]);

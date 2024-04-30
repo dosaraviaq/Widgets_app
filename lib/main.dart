@@ -21,3 +21,5 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
+// pausa en el video 8 min4

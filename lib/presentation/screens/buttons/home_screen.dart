@@ -112,9 +112,9 @@ class CustomButtom extends StatelessWidget {
         child: InkWell(
           // InkWell--> efecto de aplastar la pantalla
           onTap: () {},
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: const Text(
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text(
               "Hola Mundo",
               style: TextStyle(color: Colors.white),
             ),
