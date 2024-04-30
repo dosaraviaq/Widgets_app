@@ -62,13 +62,25 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
 // Aca controlamos la salida brusca de la seccion se maneja en el (Dispoose)
     if (!isMounted) return;
     setState(() {});
+    moveScrollBottom();
+  }
+
+// Colocaremos un icono al finalizar el scroll
+  void moveScrollBottom() {
+    if (scrollController.position.pixels + 100 <=
+        scrollController.position.maxScrollExtent) return;
+    scrollController.animateTo(
+      scrollController.position.pixels + 120,
+      duration: const Duration(microseconds: 300),
+      curve: Curves.fastOutSlowIn,
+    );
   }
 
   void addFiveImages() {
     // Agarramos el ultimo valor de la lista
     final lastId = imagesIds.last;
     // Insertamos elementos a la lista
-    imagesIds.addAll([1, 2, 3, 4, 5].map((e) => lastId + 1));
+    imagesIds.addAll([1, 2, 3, 4, 5].map((e) => lastId + e));
   }
 
 // Para agregar el icono de refresh en la parte superior
@@ -105,6 +117,9 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
         child: RefreshIndicator(
           // LLamamos al metodo q muestra el icono de refrescar en la parte superior
           onRefresh: onRefresh,
+          // Pocisiones
+          edgeOffset: 10,
+          strokeWidth: 2,
           // ListView.builder --> lista inifinita Eficiente
           child: ListView.builder(
               // Llamammos al (scrollController) que lo definimos arriba
@@ -148,4 +163,4 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
   }
 }
 
-// Video 0,18 min 6
+// Video 0,18 min 62
