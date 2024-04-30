@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgtes_app/config/menu/menu_items.dart';
-import 'package:widgtes_app/presentation/screens/cards/cards_screen.dart';
+// import 'package:widgtes_app/presentation/screens/cards/cards_screen.dart';
+import 'package:widgtes_app/presentation/widgets/side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   // Para el name de las rutas nunca cambiara
@@ -10,13 +11,19 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
+      // Creamos una referencia que tiene la referencia al estado actual del scafold
+      key: scaffoldKey,
       appBar: AppBar(
         title: const Text("Flutter + Material 3"),
         // centerTitle: true,
       ),
       // ListView
       body: _HomeView(),
+      // Colocaremos un menu lateral que se posiciona en el left
+      // Adicional manejamos el estado actual del scaffold
+      drawer: SideMenu(scaffoldKey: scaffoldKey),
     );
   }
 }
