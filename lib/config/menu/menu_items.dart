@@ -23,7 +23,7 @@ const appMenuItems = <MenuItem>[
     link: '/counter-river',
     icon: Icons.add,
   ),
-  // Tipos de botones 
+  // Tipos de botones
   MenuItem(
     title: 'Botones',
     subTitle: 'Varios botonrd en Flutter',
@@ -78,5 +78,12 @@ const appMenuItems = <MenuItem>[
     subTitle: 'Listas infinites y pull to refresh',
     link: '/infinite',
     icon: Icons.list_alt_rounded,
+  ),
+  // Para cambiar el tema de la app
+  MenuItem(
+    title: 'Cambiar tema',
+    subTitle: 'Cambiar tema de la aplicación',
+    link: '/theme-changer',
+    icon: Icons.color_lens_outlined,
   ),
 ];
