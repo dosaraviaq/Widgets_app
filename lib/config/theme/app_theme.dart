@@ -31,4 +31,10 @@ class AppTheme {
         // Configuracion de centrado de los AppBar, posicion en left
         appBarTheme: const AppBarTheme(centerTitle: false),
       );
+
+// Exportamos el tema, una copia actual
+  AppTheme copyWith({int? selectedColor, bool? isDarkMode}) => AppTheme(
+        selectedColor: selectedColor ?? this.selectedColor,
+        isDarkMode: isDarkMode ?? this.isDarkMode,
+      );
 }

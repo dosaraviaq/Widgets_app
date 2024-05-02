@@ -10,7 +10,9 @@ class ThemeChangerScreen extends ConsumerWidget {
 // WidgetRef --> riverpod
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isDarkMode = ref.watch(isDarkmodeProvider);
+    // Para el tema oscuro o claro
+    // final isDarkMode = ref.watch(isDarkmodeProvider);
+    final isDarkMode = ref.watch(themeNotifierProvider).isDarkMode;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Theme changer'),
@@ -22,7 +24,9 @@ class ThemeChangerScreen extends ConsumerWidget {
                 : Icons.light_mode_outlined),
             onPressed: () {
               // Aca agregamos la funcionalidad de los botones
-              ref.read(isDarkmodeProvider.notifier).update((state) => !state);
+              // ref.read(isDarkmodeProvider.notifier).update((state) => !state);
+              // Ahora trabajamos con el notifier por eso los cambios
+              ref.read(themeNotifierProvider.notifier).toggleDarkmode();
             },
           )
         ],
@@ -42,7 +46,9 @@ class _ThemeChangerView extends ConsumerWidget {
     // LLamamos a la variable q usa Riverpod para los colores
     final List<Color> colors = ref.watch(colorListProvider);
     // Para seleccionar el color
-    final int selectedColor = ref.watch(selectedColorProvider);
+    // final int selectedColor = ref.watch(selectedColorProvider);
+    // Utilizando el notifier
+    final int selectedColor = ref.watch(themeNotifierProvider).selectedColor;
     return ListView.builder(
       // Agarra el tamaño de la lista
       itemCount: colors.length,
@@ -57,7 +63,10 @@ class _ThemeChangerView extends ConsumerWidget {
             groupValue: selectedColor,
             onChanged: (value) {
               // Color seleccionado
-              ref.read(selectedColorProvider.notifier).state = index;
+              // ref.read(selectedColorProvider.notifier).state = index;
+              // Aplicando notifier forma mas comlpeja pero necesaria
+              ref.read(themeNotifierProvider.notifier).changeColorIndex(index);
+              // notifier --> Clase q controla todo
             });
       },
     );

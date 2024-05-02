@@ -19,18 +19,21 @@ class MainApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // Varible para el tema dark o light
-    final bool isModeProvider = ref.watch(isDarkmodeProvider);
+    // final bool isModeProvider = ref.watch(isDarkmodeProvider);
     // Variable de colores de la app
-    final int selectedProvider = ref.watch(selectedColorProvider);
+    // final int selectedProvider = ref.watch(selectedColorProvider);
+// USAMOS NOTIFIER PROVIDER
+    final AppTheme appTheme = ref.watch(themeNotifierProvider);
     return MaterialApp.router(
       // Titulo del dialogo
       title: 'Flutter Widgets',
       // Configuracion de las rutas gorouter
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
-      theme:
-          AppTheme(selectedColor: selectedProvider, isDarkMode: isModeProvider)
-              .getTheme(),
+      // appTheme --> NotifierProvider
+      theme: appTheme
+          // AppTheme(selectedColor: selectedProvider, isDarkMode: isModeProvider)
+          .getTheme(),
     );
   }
 }
