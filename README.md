@@ -1,3 +1,3 @@
 # widgtes_app
 
-A new Flutter project.
+Especifica aca las configuraciones de la aplicacion
